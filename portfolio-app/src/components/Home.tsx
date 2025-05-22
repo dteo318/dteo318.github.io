@@ -1,10 +1,66 @@
+import Link from "next/link";
+import CodeIcon from "./icons/CodeIcon";
 import Section from "./Section";
+import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
+import BracketsIcon from "./icons/BracketsIcon";
+import GithubIcon from "./icons/GithubIcon";
+import LinkedInIcon from "./icons/LinkedInIcon";
+
+const SkillBadge = ({ skill }: { skill: string }) => {
+  return (
+    <Badge
+      variant="outline"
+      className="text-sm rounded-full text-stone-400 border-2 py-1 px-3"
+    >
+      {skill}
+    </Badge>
+  );
+};
 
 export default function Home() {
   return (
-    <Section id="home">
-      <h1>Home Page</h1>
-      <p>Welcome to the home page!</p>
+    <Section
+      id="home"
+      className="flex flex-col gap-6 items-center justify-center bg-[url('/blob-haikei-background.svg')] bg-no-repeat bg-center bg-cover"
+    >
+      <CodeIcon className="h-32 w-32 text-white" />
+      <h1 className="text-8xl font-bold text-center text-stone-300">
+        Daniel Teo
+      </h1>
+      <p className="text-xl font-extralight">
+        Software Engineer with expertise in{" "}
+        <span className="font-bold text-[#02d9a9]">Java</span> and{" "}
+        <span className="font-bold text-[#02d9a9]">TypeScript</span>
+      </p>
+      <div className="flex items-center gap-2">
+        <SkillBadge skill="Java" />
+        <SkillBadge skill="TypeScript" />
+        <SkillBadge skill="Python" />
+        <SkillBadge skill="React.js" />
+        <SkillBadge skill="PostgreSQL" />
+      </div>
+      <div className="flex items-center gap-4">
+        <Button asChild variant="secondary" className="hover:scale-115">
+          <Link href="#projects">
+            <BracketsIcon /> View Projects
+          </Link>
+        </Button>
+        <Button asChild size="icon" className="hover:scale-105 hover:rotate-15">
+          <Link href="https://github.com/dteo318">
+            <GithubIcon />
+          </Link>
+        </Button>
+        <Button
+          asChild
+          size="icon"
+          className="hover:scale-105 hover:-rotate-15"
+        >
+          <Link href="https://www.linkedin.com/in/danieltatloongteo/">
+            <LinkedInIcon />
+          </Link>
+        </Button>
+      </div>
     </Section>
   );
 }
