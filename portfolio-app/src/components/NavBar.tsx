@@ -44,9 +44,6 @@ export default function NavBar() {
             <a href="#projects">Projects</a>
           </NavListItem>
           <NavListItem>
-            <a href="#skills">Skills</a>
-          </NavListItem>
-          <NavListItem>
             <a href="#contact">Contact</a>
           </NavListItem>
         </ul>
