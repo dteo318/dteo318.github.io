@@ -9,11 +9,11 @@ export default function ResumeIcon(props: React.SVGProps<SVGSVGElement>) {
       stroke="#dedede"
       {...props}
     >
-      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g
         id="SVGRepo_tracerCarrier"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       ></g>
       <g id="SVGRepo_iconCarrier">
         <rect height="1" width="12" x="10" y="29"></rect>

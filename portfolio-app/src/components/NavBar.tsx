@@ -2,18 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { ModeToggle } from "./ModeToggle";
-import ScrollSpy from "react-scrollspy-navigation";
-
-const NavListItem = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <li className="hover:text-teal-500 dark:hover:text-stone-200 duration-200 ease-in">
-      {children}
-    </li>
-  );
-};
+import { useScrollSpy } from "@/lib/hooks/useSpy";
 
 export default function NavBar() {
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const sectionIds = ["home", "about", "experience", "projects", "contact"];
+  const activeId = useScrollSpy(sectionIds);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,32 +21,25 @@ export default function NavBar() {
 
   return (
     <div className="min-h-20">
-      <ScrollSpy activeClass="text-red-500 dark:text-[#32936F]">
-        <nav
-          className={`flex items-center justify-center gap-4 p-4 z-50 w-full fixed transition-transform duration-300 ease-in-out ${
-            isScrolled ? "translate-y-2" : "-translate-y-0"
-          }`}
-        >
-          <ul className="flex gap-6 py-4 px-6 rounded-4xl font-semibold bg-stone-50 text-zinc-800 shadow-sm dark:bg-zinc-800 dark:text-zinc-400">
-            <NavListItem>
-              <a href="#home">Home</a>
-            </NavListItem>
-            <NavListItem>
-              <a href="#about">About</a>
-            </NavListItem>
-            <NavListItem>
-              <a href="#experience">Experience</a>
-            </NavListItem>
-            <NavListItem>
-              <a href="#projects">Projects</a>
-            </NavListItem>
-            <NavListItem>
-              <a href="#contact">Contact</a>
-            </NavListItem>
-          </ul>
-          <ModeToggle />
-        </nav>
-      </ScrollSpy>
+      <nav
+        className={`flex items-center justify-center gap-4 p-4 z-50 w-full fixed transition-transform duration-300 ease-in-out ${
+          isScrolled ? "translate-y-2" : "-translate-y-0"
+        }`}
+      >
+        <ul className="flex gap-6 py-4 px-6 rounded-4xl font-semibold bg-stone-50 text-zinc-800 shadow-sm dark:bg-zinc-800 dark:text-zinc-400">
+          {sectionIds.map((id) => (
+            <li
+              key={id}
+              className={`hover:text-teal-500 dark:hover:text-stone-200 duration-200 ease-in ${
+                activeId === id ? "text-red-500 dark:text-[#32936F]" : ""
+              }`}
+            >
+              <a href={`#${id}`}>{id}</a>
+            </li>
+          ))}
+        </ul>
+        <ModeToggle />
+      </nav>
     </div>
   );
 }
