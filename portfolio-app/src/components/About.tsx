@@ -7,7 +7,7 @@ export default function About() {
   return (
     <Section
       id="about"
-      className="flex flex-col items-center p-8 gap-3 bg-[url('/blob-scene-haikei-background.svg')] bg-no-repeat bg-center bg-cover"
+      className="p-8 bg-[url('/blob-scene-haikei-background.svg')]"
     >
       <Title title="About Me" />
       <div className="flex justify-between items-center py-12 px-16">

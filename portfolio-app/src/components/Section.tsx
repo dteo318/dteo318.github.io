@@ -8,7 +8,10 @@ export default function Section({
   className?: string;
 }) {
   return (
-    <section id={id} className={`min-h-full ${className}`}>
+    <section
+      id={id}
+      className={`min-h-full flex flex-col items-center gap-3 bg-no-repeat bg-center bg-cover ${className}`}
+    >
       {children}
     </section>
   );

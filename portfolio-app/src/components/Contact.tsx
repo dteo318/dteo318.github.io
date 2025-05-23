@@ -1,10 +1,10 @@
 import Section from "./Section";
+import Title from "./Title";
 
 export default function Contact() {
   return (
     <Section id="contact">
-      <h1>Contact Page</h1>
-      <p>Welcome to the contact page!</p>
+      <Title title="Contact Me" />
     </Section>
   );
 }
