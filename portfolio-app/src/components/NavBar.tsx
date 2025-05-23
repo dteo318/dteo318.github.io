@@ -26,7 +26,7 @@ export default function NavBar() {
 
   return (
     <div className="min-h-20">
-      <ScrollSpy activeClass="text-red-500 dark:text-teal-500">
+      <ScrollSpy activeClass="text-red-500 dark:text-[#32936F]">
         <nav
           className={`flex items-center justify-center gap-4 p-4 z-50 w-full fixed transition-transform duration-300 ease-in-out ${
             isScrolled ? "translate-y-2" : "-translate-y-0"

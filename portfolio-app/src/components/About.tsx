@@ -1,6 +1,7 @@
 import BracketsIcon from "./icons/BracketsIcon";
 import Section from "./Section";
 import SkillCard from "./SkillCard";
+import Title from "./Title";
 
 export default function About() {
   return (
@@ -8,10 +9,7 @@ export default function About() {
       id="about"
       className="flex flex-col items-center p-8 gap-3 bg-[url('/blob-scene-haikei-background.svg')] bg-no-repeat bg-center bg-cover"
     >
-      <h2 className="text-6xl font-bold text-center text-stone-300">
-        About Me
-      </h2>
-      <hr className="w-1/8 h-1.5 bg-[#32936F] rounded-full" />
+      <Title title="About Me" />
       <div className="flex justify-between items-center py-12 px-16">
         <p className="w-1/3 text-lg font-light text-stone-300">
           Hi 👋🏼 I’m Daniel—a software engineer at Amazon with a Computer Science
