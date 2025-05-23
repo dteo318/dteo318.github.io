@@ -1,22 +1,11 @@
 import Link from "next/link";
 import CodeIcon from "./icons/CodeIcon";
 import Section from "./Section";
-import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import BracketsIcon from "./icons/BracketsIcon";
 import GithubIcon from "./icons/GithubIcon";
 import LinkedInIcon from "./icons/LinkedInIcon";
-
-const SkillBadge = ({ skill }: { skill: string }) => {
-  return (
-    <Badge
-      variant="outline"
-      className="text-sm rounded-full text-stone-400 border-2 py-1 px-3"
-    >
-      {skill}
-    </Badge>
-  );
-};
+import SkillBadge from "./SkillBadge";
 
 export default function Home() {
   return (
