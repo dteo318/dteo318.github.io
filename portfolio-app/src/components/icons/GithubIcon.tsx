@@ -1,11 +1,5 @@
-"use client";
-
-import { useTheme } from "next-themes";
-
-export default function GithubIcon(props: React.SVGProps<SVGSVGElement>) {
-  const { theme } = useTheme();
-
-  return theme === "dark" ? (
+const GithubIconDark = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
     <svg
       viewBox="0 0 24 24"
       fill="none"
@@ -30,7 +24,11 @@ export default function GithubIcon(props: React.SVGProps<SVGSVGElement>) {
         ></path>{" "}
       </g>
     </svg>
-  ) : (
+  );
+};
+
+const GithubIconLight = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
     <svg
       viewBox="0 0 24 24"
       fill="none"
@@ -55,5 +53,20 @@ export default function GithubIcon(props: React.SVGProps<SVGSVGElement>) {
         ></path>{" "}
       </g>
     </svg>
+  );
+};
+
+export default function GithubIcon({
+  className,
+  ...props
+}: React.SVGProps<SVGSVGElement>) {
+  return (
+    <>
+      <GithubIconDark
+        className={`hidden dark:inline ${className}`}
+        {...props}
+      />
+      <GithubIconLight className={`dark:hidden ${className}`} {...props} />
+    </>
   );
 }

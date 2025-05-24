@@ -32,6 +32,7 @@ export default function ProjectCard({
           alt={name}
           fill
           className="object-contain rounded-t-lg"
+          unoptimized // because deploying to static hosting
         />
       </div>
       <CardHeader className="flex flex-col justify-start flex-1">

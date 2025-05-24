@@ -1,11 +1,5 @@
-"use client";
-
-import { useTheme } from "next-themes";
-
-export default function BracketsIcon(props: React.SVGProps<SVGSVGElement>) {
-  const { theme } = useTheme();
-
-  return theme === "dark" ? (
+const BracketsIconDark = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
     <svg
       viewBox="0 0 24 24"
       fill="none"
@@ -34,7 +28,11 @@ export default function BracketsIcon(props: React.SVGProps<SVGSVGElement>) {
         ></path>{" "}
       </g>
     </svg>
-  ) : (
+  );
+};
+
+const BracketsIconLight = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
     <svg
       viewBox="0 0 24 24"
       fill="none"
@@ -67,5 +65,20 @@ export default function BracketsIcon(props: React.SVGProps<SVGSVGElement>) {
         ></path>{" "}
       </g>
     </svg>
+  );
+};
+
+export default function BracketsIcon({
+  className,
+  ...props
+}: React.SVGProps<SVGSVGElement>) {
+  return (
+    <>
+      <BracketsIconLight className={`dark:hidden ${className}`} {...props} />
+      <BracketsIconDark
+        className={`hidden dark:inline ${className}`}
+        {...props}
+      />
+    </>
   );
 }

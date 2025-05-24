@@ -1,11 +1,5 @@
-"use client";
-
-import { useTheme } from "next-themes";
-
-export default function NewTabIcon(props: React.SVGProps<SVGSVGElement>) {
-  const { theme } = useTheme();
-
-  return theme === "dark" ? (
+const NewTabIconDark = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
     <svg
       viewBox="0 0 24 24"
       fill="none"
@@ -30,7 +24,11 @@ export default function NewTabIcon(props: React.SVGProps<SVGSVGElement>) {
         ></path>{" "}
       </g>
     </svg>
-  ) : (
+  );
+};
+
+const NewTabIconLight = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
     <svg
       viewBox="0 0 24 24"
       fill="none"
@@ -55,5 +53,20 @@ export default function NewTabIcon(props: React.SVGProps<SVGSVGElement>) {
         ></path>{" "}
       </g>
     </svg>
+  );
+};
+
+export default function NewTabIcon({
+  className,
+  ...props
+}: React.SVGProps<SVGSVGElement>) {
+  return (
+    <>
+      <NewTabIconDark
+        className={`hidden dark:inline ${className}`}
+        {...props}
+      />
+      <NewTabIconLight className={`dark:hidden ${className}`} {...props} />
+    </>
   );
 }

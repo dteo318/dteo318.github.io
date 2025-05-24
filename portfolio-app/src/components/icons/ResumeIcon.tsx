@@ -1,11 +1,5 @@
-"use client";
-
-import { useTheme } from "next-themes";
-
-export default function ResumeIcon(props: React.SVGProps<SVGSVGElement>) {
-  const { theme } = useTheme();
-
-  return theme === "dark" ? (
+const ResumeIconDark = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
     <svg
       fill="#ededed"
       viewBox="0 0 32 32"
@@ -52,7 +46,11 @@ export default function ResumeIcon(props: React.SVGProps<SVGSVGElement>) {
         <path d="M20.67,15.2a6,6,0,0,1-.84.66,4,4,0,0,0-7.66,0,6,6,0,0,1-.84-.66,5,5,0,0,1,9.34,0Z"></path>
       </g>
     </svg>
-  ) : (
+  );
+};
+
+const ResumeIconLight = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
     <svg
       fill="#000000"
       viewBox="0 0 32 32"
@@ -98,5 +96,20 @@ export default function ResumeIcon(props: React.SVGProps<SVGSVGElement>) {
         <path d="M20.67,15.2a6,6,0,0,1-.84.66,4,4,0,0,0-7.66,0,6,6,0,0,1-.84-.66,5,5,0,0,1,9.34,0Z"></path>
       </g>
     </svg>
+  );
+};
+
+export default function ResumeIcon({
+  className,
+  ...props
+}: React.SVGProps<SVGSVGElement>) {
+  return (
+    <>
+      <ResumeIconDark
+        className={`hidden dark:inline ${className}`}
+        {...props}
+      />
+      <ResumeIconLight className={`dark:hidden ${className}`} {...props} />
+    </>
   );
 }

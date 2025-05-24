@@ -1,11 +1,5 @@
-"use client";
-
-import { useTheme } from "next-themes";
-
-export default function CodeIcon(props: React.SVGProps<SVGSVGElement>) {
-  const { theme } = useTheme();
-
-  return theme === "dark" ? (
+const CodeIconDark = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
     <svg
       viewBox="0 0 24 24"
       fill="none"
@@ -46,7 +40,11 @@ export default function CodeIcon(props: React.SVGProps<SVGSVGElement>) {
         ></path>{" "}
       </g>
     </svg>
-  ) : (
+  );
+};
+
+const CodeIconLight = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
     <svg
       viewBox="0 0 24 24"
       fill="none"
@@ -87,5 +85,17 @@ export default function CodeIcon(props: React.SVGProps<SVGSVGElement>) {
         ></path>{" "}
       </g>
     </svg>
+  );
+};
+
+export default function CodeIcon({
+  className,
+  ...props
+}: React.SVGProps<SVGSVGElement>) {
+  return (
+    <>
+      <CodeIconDark className={`hidden dark:inline ${className}`} {...props} />
+      <CodeIconLight className={`dark:hidden ${className}`} {...props} />
+    </>
   );
 }

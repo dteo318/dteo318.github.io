@@ -1,11 +1,5 @@
-"use client";
-
-import { useTheme } from "next-themes";
-
-export default function LinkedInIcon(props: React.SVGProps<SVGSVGElement>) {
-  const { theme } = useTheme();
-
-  return theme === "dark" ? (
+const LinkedInIconDark = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
     <svg
       viewBox="0 -2 44 44"
       version="1.1"
@@ -47,7 +41,11 @@ export default function LinkedInIcon(props: React.SVGProps<SVGSVGElement>) {
         </g>{" "}
       </g>
     </svg>
-  ) : (
+  );
+};
+
+const LinkedInIconLight = (props: React.SVGProps<SVGSVGElement>) => {
+  return (
     <svg
       viewBox="0 -2 44 44"
       version="1.1"
@@ -89,5 +87,20 @@ export default function LinkedInIcon(props: React.SVGProps<SVGSVGElement>) {
         </g>{" "}
       </g>
     </svg>
+  );
+};
+
+export default function LinkedInIcon({
+  className,
+  ...props
+}: React.SVGProps<SVGSVGElement>) {
+  return (
+    <>
+      <LinkedInIconDark
+        className={`hidden dark:inline ${className}`}
+        {...props}
+      />
+      <LinkedInIconLight className={`dark:hidden ${className}`} {...props} />
+    </>
   );
 }
