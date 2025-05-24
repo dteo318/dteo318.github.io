@@ -25,7 +25,7 @@ export default function ProjectCard({
   technologies: string[];
 }) {
   return (
-    <Card className="bg-[#225945] pt-0 h-full flex flex-col">
+    <Card className="dark:bg-[#225945] pt-0 h-full flex flex-col">
       <div className="relative w-full h-48 bg-white rounded-t-xl">
         <Image
           src={image}
@@ -41,12 +41,12 @@ export default function ProjectCard({
             <SkillBadge
               skill={tech}
               key={tech}
-              className="text-stone-300 hover:dark:text-[#FF9B71] hover:dark:border-[#FF9B71]"
+              className="dark:text-stone-300 hover:text-emerald-600 hover:border-emerald-600 hover:dark:text-[#FF9B71] hover:dark:border-[#FF9B71]"
             />
           ))}
         </CardDescription>
       </CardHeader>
-      <CardContent className="font-light text-sm text-neutral-100">
+      <CardContent className="dark:font-light text-sm dark:text-neutral-100">
         {description}
       </CardContent>
       <CardFooter>

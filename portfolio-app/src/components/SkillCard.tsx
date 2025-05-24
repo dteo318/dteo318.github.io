@@ -18,15 +18,15 @@ export default function SkillCard({
   technologies: string[];
 }) {
   return (
-    <Card className="hover:scale-110 transition-transform duration-300 ease-in-out bg-[#225945]">
+    <Card className="hover:scale-110 transition-transform duration-300 ease-in-out dark:bg-[#225945]">
       <CardHeader className="flex justify-between items-center">
         <CardTitle className="w-8 h-8">{skillIcon}</CardTitle>
-        <CardDescription className="text-md text-stone-200 font-bold text-right">
+        <CardDescription className="text-md text-slate-800 dark:text-stone-200 font-bold text-right">
           {skillName}
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <p className="text-sm font-light text-stone-300 text-right">
+        <p className="text-sm dark:font-light dark:text-stone-300 text-right">
           {technologies.join(" | ")}
         </p>
       </CardContent>

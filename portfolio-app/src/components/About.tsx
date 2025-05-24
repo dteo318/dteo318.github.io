@@ -11,7 +11,7 @@ export default function About() {
     >
       <Title title="About Me" />
       <div className="flex justify-between items-center py-12 px-16">
-        <p className="w-1/3 text-lg font-light text-stone-300">
+        <p className="w-1/3 text-lg font-light dark:text-stone-300">
           Hi 👋🏼 I’m Daniel—a software engineer at Amazon with a Computer Science
           degree from UCLA. I’ve worked across the stack, building scalable
           backend systems, API integrations, and intuitive web experiences. My

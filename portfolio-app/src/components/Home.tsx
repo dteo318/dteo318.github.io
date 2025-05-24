@@ -11,16 +11,21 @@ export default function Home() {
   return (
     <Section
       id="home"
-      className="flex flex-col gap-6 items-center justify-center bg-[url('/blob-haikei-background.svg')] bg-no-repeat bg-center bg-cover"
+      className="gap-6 justify-center bg-[url('/blob-haikei-background.svg')]"
     >
-      <CodeIcon className="h-32 w-32 text-white" />
-      <h1 className="text-8xl font-bold text-center text-stone-300">
+      <CodeIcon className="h-32 w-32" />
+      <h1 className="text-8xl font-bold text-center text-slate-800 dark:text-stone-300">
         Daniel Teo
       </h1>
-      <p className="text-xl font-extralight">
+      <p className="text-xl dark:font-extralight">
         Software Engineer with expertise in{" "}
-        <span className="font-bold text-[#02d9a9]">Java</span> and{" "}
-        <span className="font-bold text-[#02d9a9]">TypeScript</span>
+        <span className="font-bold text-emerald-600 dark:text-[#02d9a9]">
+          Java
+        </span>{" "}
+        and{" "}
+        <span className="font-bold text-emerald-600 dark:text-[#02d9a9]">
+          TypeScript
+        </span>
       </p>
       <div className="flex items-center gap-2">
         <SkillBadge skill="Java" />

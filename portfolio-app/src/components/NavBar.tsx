@@ -31,7 +31,7 @@ export default function NavBar() {
             <li
               key={id}
               className={`hover:text-teal-500 dark:hover:text-stone-200 duration-200 ease-in ${
-                activeId === id ? "text-red-500 dark:text-[#32936F]" : ""
+                activeId === id ? "text-[#32936F]" : ""
               }`}
             >
               <a href={`#${id}`}>{id}</a>

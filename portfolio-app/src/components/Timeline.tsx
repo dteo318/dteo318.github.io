@@ -7,6 +7,7 @@ import {
 import WorkIcon from "./icons/WorkIcon";
 
 import "react-vertical-timeline-component/style.min.css";
+import { useTheme } from "next-themes";
 
 const Experience = ({
   employer,
@@ -15,6 +16,7 @@ const Experience = ({
   description,
   skills,
   employmentPeriod,
+  darkMode = false,
 }: {
   employer: string;
   jobTitle: string;
@@ -22,36 +24,48 @@ const Experience = ({
   description: string;
   skills: string[];
   employmentPeriod: string;
+  darkMode?: boolean;
 }) => {
   return (
     <VerticalTimelineElement
       className="vertical-timeline-element--work"
       contentStyle={{
-        background: "#225945",
+        background: darkMode ? "#225945" : "#fff",
         color: "#e7e5e4",
-        boxShadow: "none",
+        boxShadow: darkMode ? "none" : "0 0 10px rgba(0, 0, 0, 0.1)",
       }}
-      contentArrowStyle={{ borderRight: "7px solid #225945" }}
+      contentArrowStyle={{
+        borderRight: `7px solid ${darkMode ? "#225945" : "#fff"}`,
+      }}
       date={employmentPeriod}
-      dateClassName="text-stone-200"
-      iconStyle={{ background: "#3EB68A", color: "#E7D8C9" }}
+      dateClassName={darkMode ? "text-stone-200" : "text-stone-600"}
+      iconStyle={{
+        background: darkMode ? "#3EB68A" : "#059669",
+      }}
       icon={<WorkIcon className="w-5 h-5" />}
     >
-      <h3 className="vertical-timeline-element-title text-3xl font-bold">
+      <h3 className="vertical-timeline-element-title text-slate-800 dark:text-stone-300 text-3xl font-bold">
         {employer}
       </h3>
-      <h4 className="vertical-timeline-element-subtitle ">
+      <h4 className="vertical-timeline-element-subtitle text-slate-800 dark:text-stone-300">
         <span className="font-semibold text-lg">{jobTitle}</span> — {location}
       </h4>
-      <p className="text-sm italic">{description}</p>
-      <p className="text-xs text-stone-300">{skills.join(" • ")}</p>
+      <p className="text-sm italic text-slate-800 dark:text-stone-300">
+        {description}
+      </p>
+      <p className="text-xs dark:text-stone-300 text-slate-800">
+        {skills.join(" • ")}
+      </p>
     </VerticalTimelineElement>
   );
 };
 
 export default function Timeline() {
+  const { theme } = useTheme();
+  const darkMode = theme === "dark";
+
   return (
-    <ExperienceTimeline lineColor="#3EB68A">
+    <ExperienceTimeline lineColor={theme === "dark" ? "#3EB68A" : "#059669"}>
       <Experience
         employer="Amazon"
         jobTitle="Software Development Engineer Intern"
@@ -59,6 +73,7 @@ export default function Timeline() {
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut semper ex. Nunc finibus ligula id ex auctor lobortis. Integer."
         skills={["Java", "TypeScript", "AWS"]}
         employmentPeriod="June 2024 - September 2024"
+        darkMode={darkMode}
       />
       <Experience
         employer="BruinRent.io"
@@ -67,6 +82,7 @@ export default function Timeline() {
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut semper ex. Nunc finibus ligula id ex auctor lobortis. Integer."
         skills={["TypeScript", "React.js", "Node.js", "Firebase"]}
         employmentPeriod="October 2023 - March 2024"
+        darkMode={darkMode}
       />
       <Experience
         employer="Amazon"
@@ -83,6 +99,7 @@ export default function Timeline() {
           "CloudFormation",
         ]}
         employmentPeriod="June 2023 - September 2023"
+        darkMode={darkMode}
       />
       <Experience
         employer="Cornerstone OnDemand"
@@ -91,6 +108,7 @@ export default function Timeline() {
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut semper ex. Nunc finibus ligula id ex auctor lobortis. Integer."
         skills={["TypeScript", "C#", "Azure"]}
         employmentPeriod="August 2022 - November 2022"
+        darkMode={darkMode}
       />
       <Experience
         employer="Behaivior"
@@ -105,6 +123,7 @@ export default function Timeline() {
           "GCP",
         ]}
         employmentPeriod="October 2021 - March 2022"
+        darkMode={darkMode}
       />
       <Experience
         employer="Waypointe Management Consulting"
@@ -120,6 +139,7 @@ export default function Timeline() {
           "Matplotlib",
         ]}
         employmentPeriod="October 2021 - March 2022"
+        darkMode={darkMode}
       />
     </ExperienceTimeline>
   );

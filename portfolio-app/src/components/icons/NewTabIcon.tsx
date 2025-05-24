@@ -1,9 +1,17 @@
+"use client";
+
+import { useTheme } from "next-themes";
+
 export default function NewTabIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
+  const { theme } = useTheme();
+
+  return theme === "dark" ? (
     <svg
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      stroke="#000000"
+      strokeWidth="1.584"
       {...props}
     >
       <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
@@ -15,16 +23,33 @@ export default function NewTabIcon(props: React.SVGProps<SVGSVGElement>) {
       <g id="SVGRepo_iconCarrier">
         {" "}
         <path
-          d="M8 21H20.4C20.7314 21 21 20.7314 21 20.4V3.6C21 3.26863 20.7314 3 20.4 3H3.6C3.26863 3 3 3.26863 3 3.6V16"
-          stroke="#000000"
-          strokeWidth="1.5"
+          d="M5 12V6C5 5.44772 5.44772 5 6 5H18C18.5523 5 19 5.44772 19 6V18C19 18.5523 18.5523 19 18 19H12M8.11111 12H12M12 12V15.8889M12 12L5 19"
+          stroke="#464455"
           strokeLinecap="round"
           strokeLinejoin="round"
         ></path>{" "}
+      </g>
+    </svg>
+  ) : (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      stroke="#000000"
+      strokeWidth="1.584"
+      {...props}
+    >
+      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        {" "}
         <path
-          d="M3.5 20.5L12 12M12 12V16M12 12H8"
-          stroke="#000000"
-          strokeWidth="1.5"
+          d="M5 12V6C5 5.44772 5.44772 5 6 5H18C18.5523 5 19 5.44772 19 6V18C19 18.5523 18.5523 19 18 19H12M8.11111 12H12M12 12V15.8889M12 12L5 19"
+          stroke="#ededed"
           strokeLinecap="round"
           strokeLinejoin="round"
         ></path>{" "}
