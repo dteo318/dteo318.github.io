@@ -3,7 +3,6 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   output: "export",
-  assetPrefix: "/portfolio-app/",
   turbopack: {
     rules: {
       "*.svg": {
