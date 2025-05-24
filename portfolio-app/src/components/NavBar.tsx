@@ -22,15 +22,15 @@ export default function NavBar() {
   return (
     <div className="min-h-20">
       <nav
-        className={`flex items-center justify-center gap-4 p-4 z-50 w-full fixed transition-transform duration-300 ease-in-out ${
+        className={`flex items-center justify-center lg:gap-4 p-4 z-50 w-full fixed transition-transform duration-300 ease-in-out ${
           isScrolled ? "translate-y-2" : "-translate-y-0"
         }`}
       >
-        <ul className="flex gap-6 py-4 px-6 rounded-4xl font-semibold bg-stone-50 text-zinc-800 shadow-sm dark:bg-zinc-800 dark:text-zinc-400">
+        <ul className="flex gap-2 px-6 py-4 font-semibold shadow-sm lg:gap-6 rounded-4xl bg-stone-50 text-zinc-800 dark:bg-zinc-800 dark:text-zinc-400">
           {sectionIds.map((id) => (
             <li
               key={id}
-              className={`hover:text-teal-500 dark:hover:text-stone-200 duration-200 ease-in ${
+              className={`text-sm hover:text-teal-500 dark:hover:text-stone-200 duration-200 ease-in ${
                 activeId === id ? "text-[#32936F]" : ""
               }`}
             >

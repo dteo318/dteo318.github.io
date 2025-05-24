@@ -44,13 +44,14 @@ const Experience = ({
       }}
       icon={<WorkIcon className="w-5 h-5" />}
     >
-      <h3 className="vertical-timeline-element-title text-slate-800 dark:text-stone-300 text-3xl font-bold">
+      <h3 className="text-xl font-bold lg:text-3xl vertical-timeline-element-title text-slate-800 dark:text-stone-300">
         {employer}
       </h3>
       <h4 className="vertical-timeline-element-subtitle text-slate-800 dark:text-stone-300">
-        <span className="font-semibold text-lg">{jobTitle}</span> — {location}
+        <span className="font-semibold lg:text-lg">{jobTitle}</span> —{" "}
+        {location}
       </h4>
-      <p className="text-sm italic text-slate-800 dark:text-stone-300">
+      <p className="text-xs italic lg:text-sm text-slate-800 dark:text-stone-300">
         {description}
       </p>
       <p className="text-xs dark:text-stone-300 text-slate-800">

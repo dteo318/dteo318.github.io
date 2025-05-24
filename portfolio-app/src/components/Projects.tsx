@@ -78,11 +78,11 @@ export default function Projects() {
   return (
     <Section
       id="projects"
-      className="bg-[url('/blob-scatter-haikei-background.svg')]"
+      className="bg-[url('/wave-haikei-mobile-background.svg')] sm:bg-[url('/blob-scatter-haikei-background.svg')]"
     >
       <Title title="Projects" />
-      <div className="pt-18 grow flex flex-col items-center justify-center w-full max-w-2/3">
-        <Carousel className="w-full relative bottom-12">
+      <div className="flex flex-col items-center justify-center w-full pt-4 lg:pt-18 lg:grow max-w-2/3">
+        <Carousel className="relative w-full lg:bottom-12">
           <CarouselContent>
             {projects.map(
               (

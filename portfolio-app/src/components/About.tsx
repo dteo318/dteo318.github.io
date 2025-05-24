@@ -7,11 +7,11 @@ export default function About() {
   return (
     <Section
       id="about"
-      className="bg-[url('/blob-scene-haikei-background.svg')]"
+      className="sm:bg-[url('/blob-scene-haikei-background.svg')]"
     >
       <Title title="About Me" />
-      <div className="flex justify-between items-center py-12 px-16">
-        <p className="w-1/3 text-lg font-light dark:text-stone-300">
+      <div className="flex flex-col items-center justify-between gap-8 py-4 lg:py-12 lg:px-16 lg:flex-row">
+        <p className="text-center lg:font-light lg:text-lg lg:text-left lg:w-1/3 dark:text-stone-300">
           Hi 👋🏼 I’m Daniel—a software engineer at Amazon with a Computer Science
           degree from UCLA. I’ve worked across the stack, building scalable
           backend systems, API integrations, and intuitive web experiences. My
@@ -20,7 +20,7 @@ export default function About() {
           fast-paced environments. I’m especially interested in system design,
           developer tools, and building products that solve real-world problems!
         </p>
-        <div className="max-w-3/5 grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-3 lg:gap-6 lg:max-w-3/5">
           <SkillCard
             skillIcon={<BracketsIcon />}
             skillName="Backend Development"

@@ -6,7 +6,7 @@ export default function Experience() {
   return (
     <Section
       id="experience"
-      className="px-12 pt-48 bg-[url('/layered-peaks-haikei-background.svg')]"
+      className="lg:px-12 lg:pt-48 sm:bg-[url('/layered-peaks-haikei-background.svg')]"
     >
       <Title title="Experience" />
       <Timeline />

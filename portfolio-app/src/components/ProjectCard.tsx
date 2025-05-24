@@ -26,7 +26,7 @@ export default function ProjectCard({
 }) {
   return (
     <Card className="dark:bg-[#225945] pt-0 h-full flex flex-col">
-      <div className="relative w-full h-48 bg-white rounded-t-xl">
+      <div className="relative w-full bg-white h-36 lg:h-48 rounded-t-xl">
         <Image
           src={image}
           alt={name}
@@ -34,19 +34,19 @@ export default function ProjectCard({
           className="object-contain rounded-t-lg"
         />
       </div>
-      <CardHeader className="flex-1 flex flex-col justify-start">
-        <CardTitle className="text-2xl font-bold">{name}</CardTitle>
-        <CardDescription className="pt-1 flex flex-wrap items-center gap-2">
+      <CardHeader className="flex flex-col justify-start flex-1">
+        <CardTitle className="text-xl font-bold lg:text-2xl">{name}</CardTitle>
+        <CardDescription className="flex flex-wrap items-center gap-2 pt-1">
           {technologies.map((tech) => (
             <SkillBadge
               skill={tech}
               key={tech}
-              className="dark:text-stone-300 hover:text-emerald-600 hover:border-emerald-600 hover:dark:text-[#FF9B71] hover:dark:border-[#FF9B71]"
+              className="text-xs dark:text-stone-300 hover:text-emerald-600 hover:border-emerald-600 hover:dark:text-[#FF9B71] hover:dark:border-[#FF9B71]"
             />
           ))}
         </CardDescription>
       </CardHeader>
-      <CardContent className="dark:font-light text-sm dark:text-neutral-100">
+      <CardContent className="text-xs lg:text-sm dark:font-light dark:text-neutral-100">
         {description}
       </CardContent>
       <CardFooter>

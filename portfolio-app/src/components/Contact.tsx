@@ -11,8 +11,12 @@ export default function Contact() {
   return (
     <Section id="contact" className="bg-[url('/wave-haikei-background.svg')]">
       <Title title="Contact Me" />
-      <div className="pt-24 flex items-center justify-center gap-6">
-        <Button asChild variant="secondary" className="hover:scale-115">
+      <div className="grid items-center justify-center grid-cols-3 gap-6 pt-16 md:grid-cols-6 lg:pt-24">
+        <Button
+          asChild
+          variant="secondary"
+          className="col-span-3 hover:scale-115"
+        >
           <Link href="/resume.pdf" download={true}>
             <ResumeIcon /> Download My Resume
           </Link>

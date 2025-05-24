@@ -10,7 +10,7 @@ export default function SkillBadge({
   return (
     <Badge
       variant="outline"
-      className={`text-sm rounded-full dark:text-stone-400 border-2 py-1 px-3 transition-colors duration-300 ease-in-out ${className}`}
+      className={`text-sm rounded-full dark:text-stone-400 border-2 sm:py-1 sm:px-3 transition-colors duration-300 ease-in-out ${className}`}
     >
       {skill}
     </Badge>
