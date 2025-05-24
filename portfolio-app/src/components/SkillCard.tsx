@@ -2,11 +2,9 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Progress } from "./ui/progress";
 
 export default function SkillCard({
   skillIcon,
