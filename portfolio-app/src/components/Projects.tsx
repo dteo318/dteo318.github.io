@@ -15,7 +15,7 @@ export default function Projects() {
       name: "Banking Platform",
       image: "/banking-cover.png",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel purus vel ex imperdiet sagittis in vitae mauris. In nibh.",
+        "Dashboard aggregating bank data with Plaid, featuring real-time insights, auth, and error tracking.",
       githubLink: "https://github.com/dteo318/banking",
       technologies: [
         "Next.js",
@@ -31,7 +31,7 @@ export default function Projects() {
       name: "ShelterConnect",
       image: "/shelter-connect-cover.jpeg",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel purus vel ex imperdiet sagittis in vitae mauris. In nibh.",
+        "Connects users to local shelters with interactive maps, volunteer, and donation opportunities.",
       githubLink: "https://github.com/dteo318/shelterconnect",
       technologies: [
         "Next.js",
@@ -47,7 +47,7 @@ export default function Projects() {
       name: "Tweeter",
       image: "/twitter-client-cover.png",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel purus vel ex imperdiet sagittis in vitae mauris. In nibh.",
+        "Android Twitter client supporting OAuth authentication and real-time social interaction.",
       githubLink: "https://github.com/dteo318/TwitterClient",
       technologies: [
         "Java",
@@ -61,7 +61,7 @@ export default function Projects() {
       name: "Burger Towers",
       image: "/burger-towers-cover.png",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel purus vel ex imperdiet sagittis in vitae mauris. In nibh.",
+        "3D burger stacking game built with WebGL and tiny-graphics.js for browser play.",
       githubLink: "https://github.com/dteo318/burger-towers",
       technologies: ["JavaScript", "WebGL", "tiny-graphics.js"],
     },
@@ -69,7 +69,7 @@ export default function Projects() {
       name: "Parstagram",
       image: "/parstagram-cover.png",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel purus vel ex imperdiet sagittis in vitae mauris. In nibh.",
+        "Instagram-inspired Android app using Parse backend for photo sharing and user management.",
       githubLink: "https://github.com/dteo318/Parstagram",
       technologies: ["Java", "Android Studio", "Parse Backend SDK"],
     },

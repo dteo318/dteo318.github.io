@@ -20,11 +20,17 @@ export default function About() {
           fast-paced environments. I’m especially interested in system design,
           developer tools, and building products that solve real-world problems!
         </p>
-        <div className="grid grid-cols-2 gap-4 lg:grid-cols-3 lg:gap-6 lg:max-w-3/5">
+        <div className="grid grid-cols-2 gap-4 lg:gap-6 lg:max-w-3/5">
           <SkillCard
             skillIcon={<BracketsIcon />}
             skillName="Backend Development"
-            technologies={["Java", "Python", "Node.js"]}
+            technologies={[
+              "Java",
+              "Python",
+              "Node.js",
+              "Spring Boot",
+              "Express.js",
+            ]}
           />
           <SkillCard
             skillIcon={<BracketsIcon />}
@@ -32,31 +38,31 @@ export default function About() {
             technologies={[
               "React",
               "Next.js",
-              "HTML",
-              "CSS",
-              "JavaScript",
+              "Tailwind CSS",
               "TypeScript",
+              "Redux Toolkit",
             ]}
           />
           <SkillCard
             skillIcon={<BracketsIcon />}
             skillName="Database Design"
-            technologies={["PostgreSQL", "MongoDB", "DynamoDB", "MySQL"]}
-          />
-          <SkillCard
-            skillIcon={<BracketsIcon />}
-            skillName="Libraries"
-            technologies={[]}
+            technologies={[
+              "PostgreSQL",
+              "MongoDB",
+              "DynamoDB",
+              "MySQL",
+              "GCP Firestore",
+            ]}
           />
           <SkillCard
             skillIcon={<BracketsIcon />}
             skillName="Software Engineering"
-            technologies={[]}
-          />
-          <SkillCard
-            skillIcon={<BracketsIcon />}
-            skillName="Professional Experience"
-            technologies={["1 Year"]}
+            technologies={[
+              "RESTful APIs",
+              "Unit Testing",
+              "CI/CD",
+              "Cloud Computing",
+            ]}
           />
         </div>
       </div>

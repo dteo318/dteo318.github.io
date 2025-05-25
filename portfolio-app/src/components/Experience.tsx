@@ -18,7 +18,7 @@ export default function Experience() {
       jobTitle: "Software Development Engineer Intern",
       location: "Seattle, WA",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut semper ex. Nunc finibus ligula id ex auctor lobortis. Integer.",
+        "Built and integrated a cross-team validation library in Java and TypeScript, improving data reliability and eliminating redundant code.",
       skills: ["Java", "TypeScript", "AWS"],
       employmentPeriod: "June 2024 - September 2024",
     },
@@ -27,7 +27,7 @@ export default function Experience() {
       jobTitle: "Lead Frontend Engineer",
       location: "Los Angeles, CA",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut semper ex. Nunc finibus ligula id ex auctor lobortis. Integer.",
+        "Revamped and led migration to a modern, responsive UI, significantly improving usability and driving user growth.",
       skills: ["TypeScript", "React.js", "Node.js", "Firebase"],
       employmentPeriod: "October 2023 - March 2024",
     },
@@ -36,7 +36,7 @@ export default function Experience() {
       jobTitle: "Software Development Engineer Intern",
       location: "Irvine, CA",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut semper ex. Nunc finibus ligula id ex auctor lobortis. Integer.",
+        "Developed a RESTful API web service for Alexa Games using Java and AWS, enabling leaderboard features for third-party developers.",
       skills: [
         "Java",
         "TypeScript",
@@ -53,7 +53,7 @@ export default function Experience() {
       jobTitle: "Full Stack Developer Intern",
       location: "Irvine, CAa",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut semper ex. Nunc finibus ligula id ex auctor lobortis. Integer.",
+        "Improved UI and increased test coverage by building React features and writing unit tests with Jest.",
       skills: ["TypeScript", "C#", "Azure"],
       employmentPeriod: "August 2022 - November 2022",
     },
@@ -62,7 +62,7 @@ export default function Experience() {
       jobTitle: "Software Engineer Intern",
       location: "Irvine, CA",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut semper ex. Nunc finibus ligula id ex auctor lobortis. Integer.",
+        "Built onboarding flow, recovery tracking UI, and optimized data access with GCP functions for a wearable-integrated app.",
       skills: [
         "TypeScript",
         "React.js",
@@ -77,7 +77,7 @@ export default function Experience() {
       jobTitle: "Analyst",
       location: "Singapore, Singapore",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut semper ex. Nunc finibus ligula id ex auctor lobortis. Integer.",
+        "Streamlined warehouse operations by analyzing movement patterns and inventory data, reducing costs and improving space efficiency.",
       skills: [
         "Python",
         "Scikit-learn",
@@ -86,7 +86,7 @@ export default function Experience() {
         "NumPy",
         "Matplotlib",
       ],
-      employmentPeriod: "October 2021 - March 2022",
+      employmentPeriod: "December 2020 - April 2021",
     },
   ];
 
